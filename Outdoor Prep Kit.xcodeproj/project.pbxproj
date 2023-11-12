@@ -11,6 +11,17 @@
 		F85121DE2B0057D6002D54FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85121DD2B0057D6002D54FD /* ContentView.swift */; };
 		F85121E02B0057D6002D54FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F85121DF2B0057D6002D54FD /* Assets.xcassets */; };
 		F85121E42B0057D6002D54FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F85121E32B0057D6002D54FD /* Preview Assets.xcassets */; };
+		F85121ED2B00586A002D54FD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85121EC2B00586A002D54FD /* Item.swift */; };
+		F85121EF2B014503002D54FD /* TripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85121EE2B014503002D54FD /* TripsView.swift */; };
+		F85121F12B014517002D54FD /* TripDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85121F02B014517002D54FD /* TripDetail.swift */; };
+		F85121F32B014570002D54FD /* TripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85121F22B014570002D54FD /* TripCard.swift */; };
+		F85121F52B01458C002D54FD /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85121F42B01458C002D54FD /* Trip.swift */; };
+		F85121F72B014869002D54FD /* TripStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85121F62B014869002D54FD /* TripStore.swift */; };
+		F85121F92B014FBF002D54FD /* TripEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85121F82B014FBF002D54FD /* TripEdit.swift */; };
+		F85121FB2B015AA1002D54FD /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85121FA2B015AA1002D54FD /* ItemStore.swift */; };
+		F85121FE2B016C94002D54FD /* ItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85121FD2B016C94002D54FD /* ItemCard.swift */; };
+		F85122002B016CAA002D54FD /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85121FF2B016CAA002D54FD /* ItemDetail.swift */; };
+		F85122022B016CF4002D54FD /* ItemEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85122012B016CF4002D54FD /* ItemEdit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +31,17 @@
 		F85121DF2B0057D6002D54FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F85121E12B0057D6002D54FD /* Outdoor_Prep_Kit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Outdoor_Prep_Kit.entitlements; sourceTree = "<group>"; };
 		F85121E32B0057D6002D54FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F85121EC2B00586A002D54FD /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		F85121EE2B014503002D54FD /* TripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsView.swift; sourceTree = "<group>"; };
+		F85121F02B014517002D54FD /* TripDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetail.swift; sourceTree = "<group>"; };
+		F85121F22B014570002D54FD /* TripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCard.swift; sourceTree = "<group>"; };
+		F85121F42B01458C002D54FD /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		F85121F62B014869002D54FD /* TripStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStore.swift; sourceTree = "<group>"; };
+		F85121F82B014FBF002D54FD /* TripEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripEdit.swift; sourceTree = "<group>"; };
+		F85121FA2B015AA1002D54FD /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		F85121FD2B016C94002D54FD /* ItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCard.swift; sourceTree = "<group>"; };
+		F85121FF2B016CAA002D54FD /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
+		F85122012B016CF4002D54FD /* ItemEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEdit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +74,9 @@
 		F85121DA2B0057D6002D54FD /* Outdoor Prep Kit */ = {
 			isa = PBXGroup;
 			children = (
+				F85121EA2B0057F7002D54FD /* Models */,
+				F85121EB2B005807002D54FD /* Views */,
 				F85121DB2B0057D6002D54FD /* Outdoor_Prep_KitApp.swift */,
-				F85121DD2B0057D6002D54FD /* ContentView.swift */,
 				F85121DF2B0057D6002D54FD /* Assets.xcassets */,
 				F85121E12B0057D6002D54FD /* Outdoor_Prep_Kit.entitlements */,
 				F85121E22B0057D6002D54FD /* Preview Content */,
@@ -67,6 +90,48 @@
 				F85121E32B0057D6002D54FD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F85121EA2B0057F7002D54FD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F85121EC2B00586A002D54FD /* Item.swift */,
+				F85121F42B01458C002D54FD /* Trip.swift */,
+				F85121FA2B015AA1002D54FD /* ItemStore.swift */,
+				F85121F62B014869002D54FD /* TripStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F85121EB2B005807002D54FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F85121DD2B0057D6002D54FD /* ContentView.swift */,
+				F85121FC2B016C78002D54FD /* TripViews */,
+				F85122032B016CFB002D54FD /* ItemViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F85121FC2B016C78002D54FD /* TripViews */ = {
+			isa = PBXGroup;
+			children = (
+				F85121EE2B014503002D54FD /* TripsView.swift */,
+				F85121F02B014517002D54FD /* TripDetail.swift */,
+				F85121F82B014FBF002D54FD /* TripEdit.swift */,
+				F85121F22B014570002D54FD /* TripCard.swift */,
+			);
+			path = TripViews;
+			sourceTree = "<group>";
+		};
+		F85122032B016CFB002D54FD /* ItemViews */ = {
+			isa = PBXGroup;
+			children = (
+				F85121FD2B016C94002D54FD /* ItemCard.swift */,
+				F85121FF2B016CAA002D54FD /* ItemDetail.swift */,
+				F85122012B016CF4002D54FD /* ItemEdit.swift */,
+			);
+			path = ItemViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +204,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F85121F32B014570002D54FD /* TripCard.swift in Sources */,
+				F85122002B016CAA002D54FD /* ItemDetail.swift in Sources */,
 				F85121DE2B0057D6002D54FD /* ContentView.swift in Sources */,
+				F85121ED2B00586A002D54FD /* Item.swift in Sources */,
 				F85121DC2B0057D6002D54FD /* Outdoor_Prep_KitApp.swift in Sources */,
+				F85121EF2B014503002D54FD /* TripsView.swift in Sources */,
+				F85121F52B01458C002D54FD /* Trip.swift in Sources */,
+				F85122022B016CF4002D54FD /* ItemEdit.swift in Sources */,
+				F85121F72B014869002D54FD /* TripStore.swift in Sources */,
+				F85121F92B014FBF002D54FD /* TripEdit.swift in Sources */,
+				F85121FB2B015AA1002D54FD /* ItemStore.swift in Sources */,
+				F85121F12B014517002D54FD /* TripDetail.swift in Sources */,
+				F85121FE2B016C94002D54FD /* ItemCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

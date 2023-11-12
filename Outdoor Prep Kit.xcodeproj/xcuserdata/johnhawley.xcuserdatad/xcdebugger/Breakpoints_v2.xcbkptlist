@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "ABD639E8-5C0D-4EF2-9ED1-4DA2BB1E6C77"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EA3F9070-7D0D-46D8-BA56-74E0FA255AD5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Outdoor Prep Kit/Models/TripStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "save(trips:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EA3F9070-7D0D-46D8-BA56-74E0FA255AD5 - 2e6968d5ffab3537"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Outdoor_Prep_Kit.TripStore.save(trips: Swift.Array&lt;Outdoor_Prep_Kit.Trip&gt;) async throws -&gt; ()"
+                  moduleName = "Outdoor Prep Kit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johnhawley/Documents/Outdoor%20Prep%20Kit/Outdoor%20Prep%20Kit/Models/TripStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "EA3F9070-7D0D-46D8-BA56-74E0FA255AD5 - f6c9868b8751345b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable () async throws -&gt; () in Outdoor_Prep_Kit.TripStore.save(trips: Swift.Array&lt;Outdoor_Prep_Kit.Trip&gt;) async throws -&gt; ()"
+                  moduleName = "Outdoor Prep Kit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johnhawley/Documents/Outdoor%20Prep%20Kit/Outdoor%20Prep%20Kit/Models/TripStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "EA3F9070-7D0D-46D8-BA56-74E0FA255AD5 - e5d9701ba11ffd6a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in Outdoor_Prep_Kit.TripStore.save(trips: Swift.Array&lt;Outdoor_Prep_Kit.Trip&gt;) async throws -&gt; ()"
+                  moduleName = "Outdoor Prep Kit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johnhawley/Documents/Outdoor%20Prep%20Kit/Outdoor%20Prep%20Kit/Models/TripStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "93A9BAEB-40B7-4A27-A231-B3B54ABF3DF7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Outdoor Prep Kit/Models/TripStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "load()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
