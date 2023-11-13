@@ -9,13 +9,13 @@ import Foundation
 
 struct Item: Identifiable, Codable {
     let id : UUID
-    let name : String
-    let brand : String
-    let model : String
-    let weight : Double
-    let qty : Int
-    let category : String
-    let tripIDs : [String]
+    var name : String
+    var brand : String
+    var model : String
+    var weight : Double
+    var qty : Int
+    var category : String
+    var tripIDs : [String]
     
     init(id: UUID=UUID(), name: String, brand: String, model: String, weight: Double, qty: Int, category: String, tripIDs: [String]) {
         self.id = id

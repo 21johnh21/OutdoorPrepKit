@@ -14,21 +14,35 @@ struct ItemEdit: View {
     @State private var item = Item.emptyItem
     
     var body: some View {
-        Form{
-            HStack {
-                VStack(alignment: .leading){
-                    Text(item.name).font(.title3)
-                    HStack{
-                        Text(item.brand + " " + item.model).font(.caption)
+        NavigationStack {
+            Form{
+                HStack {
+                    VStack(alignment: .leading){
+                        TextField("Item Name", text: $item.name)
+                        TextField("Brand", text: $item.brand)
+                        TextField("Model", text: $item.model)
+                        HStack{
+                            //TextField("weight", text: $item.weight)
+                            Spacer()
+                            //TextField("qty", text: $item.qty)
+                        }
                     }
-                    HStack{
-                        Text(String(item.weight)+"  oz.").font(.caption)
-                        Spacer()
-                        Text(String(item.qty)).font(.caption)
+                    .padding()
+                    Spacer()
+                }
+            }
+            .toolbar{
+                ToolbarItem(placement: .cancellationAction){
+                    Button("Dismiss"){
+                        addingNewItem = false
                     }
                 }
-                .padding()
-                Spacer()
+                ToolbarItem(placement: .confirmationAction){
+                    Button("Add"){
+                        items.append(item)
+                        addingNewItem = false
+                    }
+                }
             }
         }
     }

@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct Outdoor_Prep_KitApp: App {
     @StateObject private var tripStore = TripStore()
-    @StateObject private var itemStore = ItemStore()
+    //@StateObject private var itemStore = ItemStore()
     
     var body: some Scene {
         WindowGroup {
@@ -30,14 +30,14 @@ struct Outdoor_Prep_KitApp: App {
                     fatalError() //TODO: handle
                 }
             }
-            .task {
-                do {
-                    try await itemStore.load()
-                } catch {
-                    fatalError() //TODO: handle
-                }
-            }
-            .environmentObject(itemStore)
+//            .task {
+//                do {
+//                    try await itemStore.load()
+//                } catch {
+//                    fatalError() //TODO: handle
+//                }
+//            }
+            //.environmentObject(itemStore)
         }
     }
 }

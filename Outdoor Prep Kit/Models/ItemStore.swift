@@ -24,6 +24,11 @@ class ItemStore: ObservableObject{
             guard let data = try? Data(contentsOf: fileURL) else {
                 return []
             }
+            // for debuging -------
+            if let json = String(data: data, encoding: .utf8) {
+                print(json)
+            }
+            // ----
             let items = try JSONDecoder().decode([Item].self, from: data)
             //TODO: filter down to only the items we want here
             return items

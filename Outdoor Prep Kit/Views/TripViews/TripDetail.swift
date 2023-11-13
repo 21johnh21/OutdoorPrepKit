@@ -9,10 +9,12 @@ import SwiftUI
 
 struct TripDetail: View {
     @Binding var trip : Trip 
+    @Binding var items : [Item]
     
-    @EnvironmentObject var itemStore: ItemStore
-//    @Environment(\.scenePhase) private var scenePhase
-//    let saveAction: ()->Void
+//    @EnvironmentObject var itemStore: ItemStore
+    @Environment(\.scenePhase) private var scenePhase
+    let saveAction: ()->Void
+//    @StateObject private var itemStore = ItemStore()
     @State private var addingNewItem = false
     
     var body: some View {
@@ -35,27 +37,31 @@ struct TripDetail: View {
             }
             .padding() 
             NavigationStack{
-                List(getItems(allItems: itemStore, tripID: trip.id)){ item in
-                    
+//                List(getItems(allItems: items, tripID: trip.id)){ item in
+//                    ItemCard(item: item)
+//                }
+                List(items){ item in
+                    ItemCard(item: item)
                 }
             }
-//            .sheet(isPresented: $addingNewItem){
-//                ItemEdit(items: $itemStore, addingNewItem: $addingNewItem)
-//            }
-//            .onChange(of: scenePhase) {
-//                if scenePhase == .inactive {
-//                    saveAction()
-//                }
-//            }
+            .sheet(isPresented: $addingNewItem){
+                ItemEdit(items: $items, addingNewItem: $addingNewItem)
+            }
+            .onChange(of: scenePhase) {
+                //TODO: I need to use something other than scene phase here. This only saves when the app is closed.
+                if scenePhase == .inactive || scenePhase == .background {
+                    saveAction()
+                }
+            }
         }
     }
 }
 
-func getItems(allItems: ItemStore, tripID: UUID)->[Item]{
+func getItems(allItems: [Item], tripID: UUID)->[Item]{
     var itemsForTrip : [Item] = []
     let tripIDString = tripID.uuidString
     
-    for item in allItems.items{
+    for item in allItems{
         for itemTripID in item.tripIDs {
             if itemTripID == tripIDString {
                 itemsForTrip.append(item)
@@ -65,6 +71,6 @@ func getItems(allItems: ItemStore, tripID: UUID)->[Item]{
     return itemsForTrip
 }
 
-#Preview {
-    TripDetail(trip: .constant(Trip.sampleTrips[0])).environmentObject(ItemStore())
-}
+//#Preview {
+//    //TripDetail(trip: .constant(Trip.sampleTrips[0]), items: )
+//}
