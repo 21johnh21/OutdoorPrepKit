@@ -35,7 +35,7 @@ struct TripDetail: View {
             .padding()
             List{
                 ForEach($itemManager.items) { $item in
-                    NavigationLink(destination: ItemDetail()){
+                    NavigationLink(destination: ItemDetail(item: item)){
                         ItemCard(item: item)
                     }
                 }

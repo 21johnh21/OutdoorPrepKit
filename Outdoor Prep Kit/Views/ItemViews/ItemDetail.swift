@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct ItemDetail: View {
+    let item : Item
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(item.name).font(.title).padding(.top)
+        HStack {
+            VStack(alignment: .leading){
+                Text(item.brand)
+                Text(item.model)
+                Text(String(item.weight))
+                Text(String(item.qty))
+            }
+            .padding()
+            Spacer()
+        }
+        Spacer()
     }
 }
 
 #Preview {
-    ItemDetail()
+    ItemDetail(item: Item.sampleItems[0])
 }
