@@ -16,12 +16,12 @@
 		F85121F12B014517002D54FD /* TripDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85121F02B014517002D54FD /* TripDetail.swift */; };
 		F85121F32B014570002D54FD /* TripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85121F22B014570002D54FD /* TripCard.swift */; };
 		F85121F52B01458C002D54FD /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85121F42B01458C002D54FD /* Trip.swift */; };
-		F85121F72B014869002D54FD /* TripStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85121F62B014869002D54FD /* TripStore.swift */; };
 		F85121F92B014FBF002D54FD /* TripEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85121F82B014FBF002D54FD /* TripEdit.swift */; };
-		F85121FB2B015AA1002D54FD /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85121FA2B015AA1002D54FD /* ItemStore.swift */; };
 		F85121FE2B016C94002D54FD /* ItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85121FD2B016C94002D54FD /* ItemCard.swift */; };
 		F85122002B016CAA002D54FD /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85121FF2B016CAA002D54FD /* ItemDetail.swift */; };
 		F85122022B016CF4002D54FD /* ItemEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85122012B016CF4002D54FD /* ItemEdit.swift */; };
+		F8BF7E342B091A9500E9F3E5 /* Trips.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BF7E332B091A9500E9F3E5 /* Trips.swift */; };
+		F8BF7E362B09307E00E9F3E5 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BF7E352B09307E00E9F3E5 /* Items.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,12 +36,12 @@
 		F85121F02B014517002D54FD /* TripDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetail.swift; sourceTree = "<group>"; };
 		F85121F22B014570002D54FD /* TripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCard.swift; sourceTree = "<group>"; };
 		F85121F42B01458C002D54FD /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
-		F85121F62B014869002D54FD /* TripStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStore.swift; sourceTree = "<group>"; };
 		F85121F82B014FBF002D54FD /* TripEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripEdit.swift; sourceTree = "<group>"; };
-		F85121FA2B015AA1002D54FD /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		F85121FD2B016C94002D54FD /* ItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCard.swift; sourceTree = "<group>"; };
 		F85121FF2B016CAA002D54FD /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 		F85122012B016CF4002D54FD /* ItemEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEdit.swift; sourceTree = "<group>"; };
+		F8BF7E332B091A9500E9F3E5 /* Trips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trips.swift; sourceTree = "<group>"; };
+		F8BF7E352B09307E00E9F3E5 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				F85121EC2B00586A002D54FD /* Item.swift */,
+				F8BF7E352B09307E00E9F3E5 /* Items.swift */,
 				F85121F42B01458C002D54FD /* Trip.swift */,
-				F85121FA2B015AA1002D54FD /* ItemStore.swift */,
-				F85121F62B014869002D54FD /* TripStore.swift */,
+				F8BF7E332B091A9500E9F3E5 /* Trips.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,15 +206,15 @@
 			files = (
 				F85121F32B014570002D54FD /* TripCard.swift in Sources */,
 				F85122002B016CAA002D54FD /* ItemDetail.swift in Sources */,
+				F8BF7E342B091A9500E9F3E5 /* Trips.swift in Sources */,
 				F85121DE2B0057D6002D54FD /* ContentView.swift in Sources */,
+				F8BF7E362B09307E00E9F3E5 /* Items.swift in Sources */,
 				F85121ED2B00586A002D54FD /* Item.swift in Sources */,
 				F85121DC2B0057D6002D54FD /* Outdoor_Prep_KitApp.swift in Sources */,
 				F85121EF2B014503002D54FD /* TripsView.swift in Sources */,
 				F85121F52B01458C002D54FD /* Trip.swift in Sources */,
 				F85122022B016CF4002D54FD /* ItemEdit.swift in Sources */,
-				F85121F72B014869002D54FD /* TripStore.swift in Sources */,
 				F85121F92B014FBF002D54FD /* TripEdit.swift in Sources */,
-				F85121FB2B015AA1002D54FD /* ItemStore.swift in Sources */,
 				F85121F12B014517002D54FD /* TripDetail.swift in Sources */,
 				F85121FE2B016C94002D54FD /* ItemCard.swift in Sources */,
 			);

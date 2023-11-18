@@ -30,11 +30,6 @@ struct Item: Identifiable, Codable {
 }
 
 extension Item{
-    static let emptyItem : Item =
-    Item(name: "", brand: "", model: "", weight: 0, qty: 0, category: "", tripIDs: [])
-}
-
-extension Item{
     static var sampleItems : [Item] =
     [
         Item(

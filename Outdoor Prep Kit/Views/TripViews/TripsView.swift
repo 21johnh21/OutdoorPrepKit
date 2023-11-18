@@ -8,51 +8,40 @@
 import SwiftUI
 
 struct TripsView: View {
-    @Binding var trips: [Trip]
     
+    @ObservedObject private var tripsManager = Trips()
     @State private var addingNewTrip = false
     @Environment(\.scenePhase) private var scenePhase
-    @StateObject private var itemStore = ItemStore()
-    let saveAction: ()->Void
-    
+
     var body: some View {
-        NavigationStack{
-            List($trips) { $trip in
-                NavigationLink(destination: TripDetail(trip: $trip, items: $itemStore.items){
-                    Task {
-                        do {
-                            try await itemStore.save(items: itemStore.items)
-                        } catch {
-                            fatalError() //TODO: handle
-                        }
+        NavigationView {
+            List {
+                ForEach($tripsManager.trips) { $trip in
+                    NavigationLink(destination: TripDetail(trip: $trip)) {
+                        TripCard(trip: $trip)
                     }
                 }
-                .task {
-                    do {
-                        try await itemStore.load()
-                    } catch {
-                        fatalError() //TODO: handle
-                    }
-                })
-                { TripCard(trip: $trip)}
+                .onDelete { indexSet in
+                    tripsManager.trips.remove(atOffsets: indexSet)
+                }
             }
-            .toolbar{
-                Button(action: {addingNewTrip = true}) {
+            .toolbar {
+                Button(action: { addingNewTrip = true }) {
                     Image(systemName: "plus")
                 }
             }
         }
-        .sheet(isPresented: $addingNewTrip){
-            TripEdit(trips: $trips, addingNewTrip: $addingNewTrip)
-        }
         .onChange(of: scenePhase) {
             if scenePhase == .inactive {
-                saveAction()
+                tripsManager.save(trips: tripsManager.trips)
             }
+        }
+        .sheet(isPresented: $addingNewTrip) {
+            TripEdit(trips: $tripsManager.trips, addingNewTrip: $addingNewTrip)
         }
     }
 }
 
 #Preview {
-    TripsView(trips: .constant(Trip.sampleTrips), saveAction: {})
+    TripsView()
 }

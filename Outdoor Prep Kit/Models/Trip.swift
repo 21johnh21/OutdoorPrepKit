@@ -20,11 +20,6 @@ struct Trip: Identifiable, Codable {
 }
 
 extension Trip {
-    static let emptyTrip : Trip =
-    Trip(name: "", description: "")
-}
-
-extension Trip {
     static let sampleTrips: [Trip] =
     [
         Trip(

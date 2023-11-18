@@ -11,7 +11,7 @@ struct TripEdit: View {
     @Binding var trips: [Trip]
     @Binding var addingNewTrip: Bool
     
-    @State private var trip = Trip.emptyTrip
+    @State private var trip = Trip(name: "", description:"")
     
     var body: some View {
         NavigationStack {

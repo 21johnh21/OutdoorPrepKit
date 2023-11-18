@@ -8,13 +8,10 @@
 import SwiftUI
 
 struct TripDetail: View {
-    @Binding var trip : Trip 
-    @Binding var items : [Item]
+    @Binding var trip : Trip
     
-//    @EnvironmentObject var itemStore: ItemStore
     @Environment(\.scenePhase) private var scenePhase
-    let saveAction: ()->Void
-//    @StateObject private var itemStore = ItemStore()
+    @ObservedObject private var itemManager = Items()
     @State private var addingNewItem = false
     
     var body: some View {
@@ -35,42 +32,43 @@ struct TripDetail: View {
                     Image(systemName: "plus")
                 }
             }
-            .padding() 
-            NavigationStack{
-//                List(getItems(allItems: items, tripID: trip.id)){ item in
-//                    ItemCard(item: item)
-//                }
-                List(items){ item in
-                    ItemCard(item: item)
+            .padding()
+            List{
+                ForEach($itemManager.items) { $item in
+                    NavigationLink(destination: ItemDetail()){
+                        ItemCard(item: item)
+                    }
+                }
+                .onDelete { indexSet in
+                    itemManager.items.remove(atOffsets: indexSet)
                 }
             }
-            .sheet(isPresented: $addingNewItem){
-                ItemEdit(items: $items, addingNewItem: $addingNewItem)
+            .sheet(isPresented: $addingNewItem) {
+                ItemEdit(items: $itemManager.items, addingNewItem: $addingNewItem)
             }
-            .onChange(of: scenePhase) {
-                //TODO: I need to use something other than scene phase here. This only saves when the app is closed.
-                if scenePhase == .inactive || scenePhase == .background {
-                    saveAction()
-                }
+            .onDisappear {
+                itemManager.save(items: itemManager.items)
+                //TODO: Should I also do this when the app is closed?
             }
         }
     }
 }
 
-func getItems(allItems: [Item], tripID: UUID)->[Item]{
-    var itemsForTrip : [Item] = []
-    let tripIDString = tripID.uuidString
-    
-    for item in allItems{
-        for itemTripID in item.tripIDs {
-            if itemTripID == tripIDString {
-                itemsForTrip.append(item)
-            }
-        }
-    }
-    return itemsForTrip
-}
 
-//#Preview {
-//    //TripDetail(trip: .constant(Trip.sampleTrips[0]), items: )
+//func getItems(allItems: [Item], tripID: UUID)->[Item]{
+//    var itemsForTrip : [Item] = []
+//    let tripIDString = tripID.uuidString
+//    
+//    for item in allItems{
+//        for itemTripID in item.tripIDs {
+//            if itemTripID == tripIDString {
+//                itemsForTrip.append(item)
+//            }
+//        }
+//    }
+//    return itemsForTrip
 //}
+
+#Preview {
+    TripDetail(trip: .constant(Trip.sampleTrips[0]))
+}

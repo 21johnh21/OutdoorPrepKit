@@ -11,7 +11,8 @@ struct ItemEdit: View {
     @Binding var items: [Item]
     @Binding var addingNewItem: Bool
     
-    @State private var item = Item.emptyItem
+    @State private var item = Item(name: "", brand: "", model: "", weight: 0.0, qty: 0, category: "", tripIDs: [])
+    //TODO: ^ probably give this id of the trip it's called from 
     
     var body: some View {
         NavigationStack {
