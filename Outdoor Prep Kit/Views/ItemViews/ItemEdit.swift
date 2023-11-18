@@ -6,13 +6,21 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ItemEdit: View {
     @Binding var items: [Item]
     @Binding var addingNewItem: Bool
     
     @State private var item = Item(name: "", brand: "", model: "", weight: 0.0, qty: 0, category: "", tripIDs: [])
-    //TODO: ^ probably give this id of the trip it's called from 
+    //TODO: ^ probably give this id of the trip it's called from
+    @State private var tempWeight : String = ""
+    let digitSet = CharacterSet.decimalDigits
+    let formatter: NumberFormatter = {
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .decimal
+            return formatter
+        }()
     
     var body: some View {
         NavigationStack {
@@ -23,9 +31,14 @@ struct ItemEdit: View {
                         TextField("Brand", text: $item.brand)
                         TextField("Model", text: $item.model)
                         HStack{
-                            //TextField("weight", text: $item.weight)
+                            TextField("weight", text: $tempWeight)
+                                .keyboardType(.numberPad)
+                                .onReceive(Just(tempWeight)) { newValue in
+                                    tempWeight = newValue.filter { $0.isNumber || $0 == "." }
+                                    item.weight = Double(tempWeight) ?? 0
+                                }
                             Spacer()
-                            //TextField("qty", text: $item.qty)
+                            Text("oz.").foregroundColor(.gray)
                         }
                     }
                     .padding()
