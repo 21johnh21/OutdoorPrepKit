@@ -12,7 +12,7 @@ struct ItemEdit: View {
     @Binding var items: [Item]
     @Binding var addingNewItem: Bool
     
-    @State private var item = Item(name: "", brand: "", model: "", weight: 0.0, qty: 0, category: "", tripIDs: [])
+    @State private var item = Item(name: "", brand: "", model: "", weight: 0.0, qty: 1, category: "", tripIDs: [])
     //TODO: ^ probably give this id of the trip it's called from
     @State private var tempWeight : String = ""
     let digitSet = CharacterSet.decimalDigits
@@ -39,6 +39,11 @@ struct ItemEdit: View {
                                 }
                             Spacer()
                             Text("oz.").foregroundColor(.gray)
+                        }
+                        HStack{
+                            Stepper("Qty", value: $item.qty, in: 1...100)
+                            Spacer()
+                            Text(String(item.qty))
                         }
                     }
                     .padding()
