@@ -10,6 +10,7 @@ import Combine
 
 struct ItemEdit: View {
     @Binding var items: [Item]
+    @Binding var isAddingOrEditingItem : Bool
     @Binding var addingNewItem: Bool
     
     @State private var item = Item(name: "", brand: "", model: "", weight: 0.0, qty: 1, category: "", tripIDs: [])
@@ -54,12 +55,22 @@ struct ItemEdit: View {
                 ToolbarItem(placement: .cancellationAction){
                     Button("Dismiss"){
                         addingNewItem = false
+                        isAddingOrEditingItem = false
                     }
                 }
                 ToolbarItem(placement: .confirmationAction){
-                    Button("Add"){
-                        items.append(item)
-                        addingNewItem = false
+                    if addingNewItem {
+                        Button(addingNewItem ? "Add" : "Save"){
+                            items.append(item)
+                            addingNewItem = false
+                            isAddingOrEditingItem = false
+                        }
+                    }else{
+                        Button(addingNewItem ? "Add" : "Save"){
+                            items.append(item)
+                            addingNewItem = false
+                            isAddingOrEditingItem = false
+                        }
                     }
                 }
             }
@@ -68,5 +79,5 @@ struct ItemEdit: View {
 }
 
 #Preview {
-    ItemEdit(items: .constant(Item.sampleItems), addingNewItem: .constant(true))
+    ItemEdit(items: .constant(Item.sampleItems), isAddingOrEditingItem: .constant(true), addingNewItem: .constant(true))
 }
