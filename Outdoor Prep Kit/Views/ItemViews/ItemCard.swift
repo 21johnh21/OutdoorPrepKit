@@ -25,6 +25,11 @@ struct ItemCard: View {
             }
             .padding()
             Spacer()
+            Image(systemName: "backpack.circle")
+                .font(.system(size: 64))
+                .padding(.trailing)
+                .foregroundColor(.green)
+            //TODO: programatically change color based on packed status
         }
     }
 }

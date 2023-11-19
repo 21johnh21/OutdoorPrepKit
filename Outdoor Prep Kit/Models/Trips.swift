@@ -43,5 +43,6 @@ class Trips: ObservableObject{
         .appendingPathComponent("trips.data")
     }
 
+    //TODO: Eventually I'll want to load in defaults from a json file. Possibly stored in the cloud.
 }
 
