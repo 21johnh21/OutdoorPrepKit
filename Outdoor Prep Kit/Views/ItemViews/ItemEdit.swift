@@ -16,13 +16,8 @@ struct ItemEdit: View {
     @State private var item = Item(name: "", brand: "", model: "", weight: 0.0, qty: 1, category: "", tripIDs: [])
     //TODO: ^ probably give this id of the trip it's called from
     @State private var tempWeight : String = ""
-    let digitSet = CharacterSet.decimalDigits
-    let formatter: NumberFormatter = {
-            let formatter = NumberFormatter()
-            formatter.numberStyle = .decimal
-            return formatter
-        }()
-    
+    let categories = Item.categories
+   
     var body: some View {
         NavigationStack {
             Form{
@@ -46,6 +41,12 @@ struct ItemEdit: View {
                             Spacer()
                             Text(String(item.qty))
                         }
+                        Picker("Category", selection: $item.category) {
+                            ForEach(categories, id: \.self) {
+                                Text($0)
+                            }
+                        }
+                        .pickerStyle(.menu)
                     }
                     .padding()
                     Spacer()
