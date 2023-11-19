@@ -43,6 +43,7 @@ struct ItemEdit: View {
                         }
                         Picker("Category", selection: $item.category) {
                             ForEach(categories, id: \.self) {
+                                Text("").tag("")
                                 Text($0)
                             }
                         }

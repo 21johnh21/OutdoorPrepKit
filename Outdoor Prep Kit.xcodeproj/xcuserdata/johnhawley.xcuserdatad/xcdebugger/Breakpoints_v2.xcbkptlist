@@ -93,8 +93,8 @@
             filePath = "Outdoor Prep Kit/Views/ItemViews/ItemEdit.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -141,8 +141,8 @@
             filePath = "Outdoor Prep Kit/Views/ItemViews/ItemEdit.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -157,8 +157,8 @@
             filePath = "Outdoor Prep Kit/Views/ItemViews/ItemEdit.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -287,6 +287,84 @@
                   startingLineNumber = "36"
                   endingLineNumber = "36"
                   offsetFromSymbolStart = "472">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AAFB7F88-179E-49A2-A742-EAA987E70A00"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Outdoor Prep Kit/Views/ItemViews/ItemListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "AAFB7F88-179E-49A2-A742-EAA987E70A00 - 58c35b911f630806"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Outdoor_Prep_Kit.SortItems(items: Swift.Array&lt;Outdoor_Prep_Kit.Item&gt;) -&gt; Swift.Array&lt;Swift.Array&lt;Outdoor_Prep_Kit.Item&gt;&gt;"
+                  moduleName = "Outdoor Prep Kit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johnhawley/Documents/Outdoor%20Prep%20Kit/Outdoor%20Prep%20Kit/Views/ItemViews/ItemListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "424">
+               </Location>
+               <Location
+                  uuid = "AAFB7F88-179E-49A2-A742-EAA987E70A00 - 58c35b911f630827"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Outdoor_Prep_Kit.SortItems(items: Swift.Array&lt;Outdoor_Prep_Kit.Item&gt;) -&gt; Swift.Array&lt;Swift.Array&lt;Outdoor_Prep_Kit.Item&gt;&gt;"
+                  moduleName = "Outdoor Prep Kit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johnhawley/Documents/Outdoor%20Prep%20Kit/Outdoor%20Prep%20Kit/Views/ItemViews/ItemListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "AAFB7F88-179E-49A2-A742-EAA987E70A00 - b2393f07f95bee2d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Outdoor_Prep_Kit.Item) -&gt; Swift.String in Outdoor_Prep_Kit.SortItems(items: Swift.Array&lt;Outdoor_Prep_Kit.Item&gt;) -&gt; Swift.Array&lt;Swift.Array&lt;Outdoor_Prep_Kit.Item&gt;&gt;"
+                  moduleName = "Outdoor Prep Kit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johnhawley/Documents/Outdoor%20Prep%20Kit/Outdoor%20Prep%20Kit/Views/ItemViews/ItemListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "AAFB7F88-179E-49A2-A742-EAA987E70A00 - 39cf5124ecc5da42"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; SwiftUI.Image in closure #3 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Button&lt;SwiftUI.Image&gt;, SwiftUI.Button&lt;SwiftUI.Image&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.swipeActions&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(edge: SwiftUI.HorizontalEdge, allowsFullSwipe: Swift.Bool, content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in Outdoor_Prep_Kit.ItemsListView.body.getter : some"
+                  moduleName = "Outdoor Prep Kit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johnhawley/Documents/Outdoor%20Prep%20Kit/Outdoor%20Prep%20Kit/Views/ItemViews/ItemListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "164">
                </Location>
             </Locations>
          </BreakpointContent>
