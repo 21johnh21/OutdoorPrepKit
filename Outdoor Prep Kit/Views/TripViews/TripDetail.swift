@@ -12,9 +12,7 @@ struct TripDetail: View {
     
     @Environment(\.scenePhase) private var scenePhase
     @ObservedObject private var itemManager = Items()
-    @GestureState private var isDetectingLongPress = false
     @State private var isAddingNewItem = false
-    @State private var isAddingOrEditingItem = false
     
     var body: some View {
         VStack {
@@ -31,8 +29,7 @@ struct TripDetail: View {
                 Text("Items").font(.headline)
                 Spacer()
                 Button(action: {
-                    isAddingNewItem = true
-                    isAddingOrEditingItem = true }) {
+                    isAddingNewItem = true}) {
                     Image(systemName: "plus")
                 }
             }
@@ -41,28 +38,26 @@ struct TripDetail: View {
                 ForEach($itemManager.items) { $item in
                     NavigationLink(destination: ItemDetail(item: item)){
                         ItemCard(item: item)
-                            .gesture(
-                                LongPressGesture(minimumDuration: 1)
-                                .updating($isDetectingLongPress) { currentState, gestureState,
-                                        transaction in
-                                    gestureState = currentState
-                                    transaction.animation = Animation.easeIn(duration: 2.0)
-                                }
-                            )
                     }
                 }
                 .onDelete { indexSet in
                     itemManager.items.remove(atOffsets: indexSet)
                 }
-            }
-            .onChange(of: isDetectingLongPress) {
-                if isDetectingLongPress {
-                    print("long press")
-                    isAddingOrEditingItem = true
+                .swipeActions(edge: .leading){
+                    Button(action: {
+                        print("Pack")}) {
+                        Image(systemName: "backpack.circle.fill")
+                        //TODO: Make this so swipping all the way to the right packs the item
+                    }
+                    Button(action: {
+                        print("Edit")
+                        isAddingNewItem = true }) {
+                        Image(systemName: "pencil.circle.fill")
+                    }
                 }
             }
-            .sheet(isPresented: $isAddingOrEditingItem) {
-                ItemEdit(items: $itemManager.items, isAddingOrEditingItem: $isAddingOrEditingItem, addingNewItem: $isAddingNewItem)
+            .sheet(isPresented: $isAddingNewItem) {
+                ItemEdit(items: $itemManager.items, addingNewItem: $isAddingNewItem)
             }
             .onDisappear {
                 itemManager.save(items: itemManager.items)
