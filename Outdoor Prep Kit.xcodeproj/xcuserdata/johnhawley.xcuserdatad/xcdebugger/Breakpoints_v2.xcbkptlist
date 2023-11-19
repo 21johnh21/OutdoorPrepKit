@@ -93,8 +93,8 @@
             filePath = "Outdoor Prep Kit/Views/ItemViews/ItemEdit.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -141,74 +141,10 @@
             filePath = "Outdoor Prep Kit/Views/ItemViews/ItemEdit.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "body"
             landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "51607B44-DFB6-4C96-9CF5-A8EE1534E8AF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Outdoor Prep Kit/Views/TripViews/TripDetail.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D4C0E3DD-BF2D-4C6E-BA71-039051FC6996"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Outdoor Prep Kit/Views/TripViews/TripDetail.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "unknown"
-            landmarkType = "0">
-            <Locations>
-               <Location
-                  uuid = "D4C0E3DD-BF2D-4C6E-BA71-039051FC6996 - 7fe934b5607c261b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in Outdoor_Prep_Kit.TripDetail.body.getter : some"
-                  moduleName = "Outdoor Prep Kit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/johnhawley/Documents/Outdoor%20Prep%20Kit/Outdoor%20Prep%20Kit/Views/TripViews/TripDetail.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "88">
-               </Location>
-               <Location
-                  uuid = "D4C0E3DD-BF2D-4C6E-BA71-039051FC6996 - 7fe934b5607c261b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in Outdoor_Prep_Kit.TripDetail.body.getter : some"
-                  moduleName = "Outdoor Prep Kit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/johnhawley/Documents/Outdoor%20Prep%20Kit/Outdoor%20Prep%20Kit/Views/TripViews/TripDetail.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -221,8 +157,8 @@
             filePath = "Outdoor Prep Kit/Views/ItemViews/ItemEdit.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>

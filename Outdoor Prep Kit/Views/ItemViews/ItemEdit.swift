@@ -11,6 +11,7 @@ import Combine
 struct ItemEdit: View {
     @Binding var items: [Item]
     @Binding var addingNewItem: Bool
+    let tripID : UUID
     
     @State private var item = Item(name: "", brand: "", model: "", weight: 0.0, qty: 1, category: "", tripIDs: [])
     //TODO: ^ probably give this id of the trip it's called from
@@ -70,6 +71,9 @@ struct ItemEdit: View {
                     }
                 }
             }
+            .onAppear {
+                item.tripIDs.append(tripID)
+            }
             .onDisappear{
                 print("disapear")
                 addingNewItem = false
@@ -79,5 +83,5 @@ struct ItemEdit: View {
 }
 
 #Preview {
-    ItemEdit(items: .constant(Item.sampleItems), addingNewItem: .constant(true))
+    ItemEdit(items: .constant(Item.sampleItems), addingNewItem: .constant(true), tripID: UUID())
 }

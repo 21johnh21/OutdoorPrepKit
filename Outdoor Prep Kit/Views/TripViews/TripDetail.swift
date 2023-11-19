@@ -11,9 +11,13 @@ struct TripDetail: View {
     @Binding var trip : Trip
     
     @Environment(\.scenePhase) private var scenePhase
-    @ObservedObject private var itemManager = Items()
     @State private var isAddingNewItem = false
-    
+    @ObservedObject private var itemManager: Items
+    init(trip: Binding<Trip>) {
+            self._trip = trip
+            self._itemManager = ObservedObject(wrappedValue: Items(tripID: trip.id))
+    }
+
     var body: some View {
         VStack {
             HStack {
@@ -57,7 +61,7 @@ struct TripDetail: View {
                 }
             }
             .sheet(isPresented: $isAddingNewItem) {
-                ItemEdit(items: $itemManager.items, addingNewItem: $isAddingNewItem)
+                ItemEdit(items: $itemManager.items, addingNewItem: $isAddingNewItem, tripID: trip.id)
             }
             .onDisappear {
                 itemManager.save(items: itemManager.items)
@@ -66,21 +70,6 @@ struct TripDetail: View {
         }
     }
 }
-
-
-//func getItems(allItems: [Item], tripID: UUID)->[Item]{
-//    var itemsForTrip : [Item] = []
-//    let tripIDString = tripID.uuidString
-//    
-//    for item in allItems{
-//        for itemTripID in item.tripIDs {
-//            if itemTripID == tripIDString {
-//                itemsForTrip.append(item)
-//            }
-//        }
-//    }
-//    return itemsForTrip
-//}
 
 #Preview {
     TripDetail(trip: .constant(Trip.sampleTrips[0]))

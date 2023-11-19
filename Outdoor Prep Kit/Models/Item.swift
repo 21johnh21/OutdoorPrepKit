@@ -15,9 +15,9 @@ struct Item: Identifiable, Codable {
     var weight : Double
     var qty : Int
     var category : String
-    var tripIDs : [String]
+    var tripIDs : [UUID]
     
-    init(id: UUID=UUID(), name: String, brand: String, model: String, weight: Double, qty: Int, category: String, tripIDs: [String]) {
+    init(id: UUID=UUID(), name: String, brand: String, model: String, weight: Double, qty: Int, category: String, tripIDs: [UUID]) {
         self.id = id
         self.name = name
         self.brand = brand
@@ -39,7 +39,7 @@ extension Item{
             weight: 20.2,
             qty: 1,
             category: "Shelter",
-            tripIDs: ["25355B5F-1111-4E5E-9EC1-5F7F321F09CB","8028A058-B662-45A8-A1B2-52F94F314911","8028A058-B662-45A8-A1B2-52F94F314911"]
+            tripIDs:[]
         ),
         Item(
             name: "Sleeping Bag",
@@ -48,7 +48,7 @@ extension Item{
             weight: 40.5,
             qty: 1,
             category: "Sleep",
-            tripIDs: ["25355B5F-1111-4E5E-9EC1-5F7F321F09CB","8028A058-B662-45A8-A1B2-52F94F314911","8028A058-B662-45A8-A1B2-52F94F314911"]
+            tripIDs:[]
         )
     ]
 }
