@@ -30,7 +30,7 @@ struct Item: Identifiable, Codable {
 }
 
 extension Item{
-    static var categories = ["Sehlter", "Sleep", "Cooking", "Clothing", "First Aid"]
+    static var categories = ["Shelter", "Sleep", "Cooking", "Clothing", "First Aid"]
 }
 
 extension Item{

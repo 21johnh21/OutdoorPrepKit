@@ -14,6 +14,7 @@ struct TripsView: View {
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
+        Text("Outdoor Prep Kit").font(.title)
         NavigationView {
             List {
                 ForEach($tripsManager.trips) { $trip in

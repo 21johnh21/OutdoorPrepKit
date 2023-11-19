@@ -13,7 +13,7 @@ struct ItemEdit: View {
     @Binding var addingNewItem: Bool
     let tripID : UUID
     
-    @State private var item = Item(name: "", brand: "", model: "", weight: 0.0, qty: 1, category: "", tripIDs: [])
+    @State private var item = Item(name: "", brand: "", model: "", weight: 0.0, qty: 1, category: "Shelter", tripIDs: [])
     //TODO: ^ probably give this id of the trip it's called from
     @State private var tempWeight : String = ""
     let categories = Item.categories
@@ -43,7 +43,6 @@ struct ItemEdit: View {
                         }
                         Picker("Category", selection: $item.category) {
                             ForEach(categories, id: \.self) {
-                                Text("").tag("")
                                 Text($0)
                             }
                         }
