@@ -18,7 +18,17 @@ class Items: ObservableObject {
     }
 
     func save(items: [Item]) {
-        let data = try? JSONEncoder().encode(items)
+//        var i = 0
+//        for item in items{
+//            if item.id.uuidString.hasPrefix("def"){
+//                items.remove()
+//            }
+//            i += 0
+//        }
+        //Don't save default items
+        let userCreatedItems = items.filter{$0.id.uuidString.hasPrefix("def")}
+        
+        let data = try? JSONEncoder().encode(userCreatedItems)
         guard let outfile = try? Self.getFileURL(tripID: tripID) else { return }
         try? data?.write(to: outfile)
     }
@@ -39,6 +49,7 @@ class Items: ObservableObject {
         }
         
         itemsFortrip += loadDefaultItems()
+        print("items: "+String(itemsFortrip.count))
         self.items = filterItems(items: itemsFortrip)
         
 //        if let tripID = tripID {

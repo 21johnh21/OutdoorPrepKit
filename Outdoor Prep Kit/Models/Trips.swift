@@ -16,7 +16,10 @@ class Trips: ObservableObject{
     }
     
     func save (trips: [Trip]){
-        let data = try? JSONEncoder().encode(trips)
+        
+        //Don't save default trips
+        let userCreatedTrips = trips.filter{$0.id.uuidString.hasPrefix("def")}
+        let data = try? JSONEncoder().encode(userCreatedTrips)
         guard let outfile = try? Self.getFileURL() else { return }
         try? data?.write(to: outfile)
     }

@@ -5,10 +5,10 @@
         "brand": "Big Agnes",
         "tripIDs":
         [
-            "3f1d6e5c-872f-11ee-b9d1-0242ac120002", "dca01b52-872f-11ee-b9d1-0242ac120002"
+            "defd6e5c-872f-11ee-b9d1-0242ac120002", "def01b52-872f-11ee-b9d1-0242ac120002"
         ],
         "category": "Shelter",
-        "id": "031899fe-872f-11ee-b9d1-0242ac120002",
+        "id": "def899fe-872f-11ee-b9d1-0242ac120002",
         "qty": 1,
         "name": "Tent"
     },
@@ -19,16 +19,16 @@
         "category": "Sleep",
         "tripIDs":
         [
-            "3f1d6e5c-872f-11ee-b9d1-0242ac120002", "dca01b52-872f-11ee-b9d1-0242ac120002"
+            "defd6e5c-872f-11ee-b9d1-0242ac120002", "def01b52-872f-11ee-b9d1-0242ac120002"
         ],
         "qty": 1,
         "name": "Sleeping Bag",
-        "id": "03189f6c-872f-11ee-b9d1-0242ac120002"
+        "id": "def89f6c-872f-11ee-b9d1-0242ac120002"
     },
     {
         "tripIDs":
         [
-            "3f1d6e5c-872f-11ee-b9d1-0242ac120002", "dca01b52-872f-11ee-b9d1-0242ac120002"
+            "defd6e5c-872f-11ee-b9d1-0242ac120002", "def01b52-872f-11ee-b9d1-0242ac120002"
         ],
         "qty": 1,
         "weight": 13.8,
@@ -36,7 +36,7 @@
         "model": "Ultralight Sleeping Pad",
         "brand": "NEMO Tensor",
         "category": "",
-        "id": "0318a098-872f-11ee-b9d1-0242ac120002"
+        "id": "def8a098-872f-11ee-b9d1-0242ac120002"
     },
     {
         "qty": 1,
@@ -44,12 +44,12 @@
         "brand": "MSR",
         "tripIDs":
         [
-            "3f1d6e5c-872f-11ee-b9d1-0242ac120002", "dca01b52-872f-11ee-b9d1-0242ac120002"
+            "defd6e5c-872f-11ee-b9d1-0242ac120002", "def01b52-872f-11ee-b9d1-0242ac120002"
         ],
         "category": "Cooking",
         "name": "Stove",
         "model": "PocketRocket",
-        "id": "0318a1c4-872f-11ee-b9d1-0242ac120002"
+        "id": "def8a1c4-872f-11ee-b9d1-0242ac120002"
     },
     {
         "weight": 64.5,
@@ -58,10 +58,10 @@
         "category": "Pack",
         "tripIDs":
         [
-            "3f1d6e5c-872f-11ee-b9d1-0242ac120002", "dca01b52-872f-11ee-b9d1-0242ac120002"
+            "defd6e5c-872f-11ee-b9d1-0242ac120002", "def01b52-872f-11ee-b9d1-0242ac120002"
         ],
         "model": "Atmos AG 50 Pack",
         "name": "Backpack",
-        "id": "0318a2be-872f-11ee-b9d1-0242ac120002"
+        "id": "def8a2be-872f-11ee-b9d1-0242ac120002"
     }
 ]
