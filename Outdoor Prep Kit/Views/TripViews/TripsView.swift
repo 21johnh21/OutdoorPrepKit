@@ -27,6 +27,13 @@ struct TripsView: View {
                 .onDelete { indexSet in
                     tripsManager.trips.remove(atOffsets: indexSet)
                 }
+                .swipeActions(edge: .leading) {
+                    Button(action: {
+                        //TODO: Add Action 
+                    }) {
+                        Image(systemName: "pencil.circle.fill")
+                    }
+                }
             }
             .toolbar {
                 Button(action: { addingNewTrip = true }) {
