@@ -12,6 +12,8 @@ struct TripsView: View {
     @ObservedObject private var tripsManager = Trips()
     @State private var addingNewTrip = false
     @Environment(\.scenePhase) private var scenePhase
+    
+    //TODO: Add a way to identify the most recently edited trip and display them in order. 
 
     var body: some View {
         Text("Outdoor Prep Kit").font(.title)

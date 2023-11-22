@@ -12,6 +12,7 @@ struct TripDetail: View {
     
     @Environment(\.scenePhase) private var scenePhase
     @State private var isAddingNewItem = false
+    @State private var isCopyingTrip = false
     @ObservedObject private var itemManager: Items
     init(trip: Binding<Trip>) {
             self._trip = trip
@@ -46,6 +47,14 @@ struct TripDetail: View {
                 itemManager.save(items: itemManager.items)
                 //TODO: Should I also do this when the app is closed?
             }
+        }
+        .toolbar {
+            Button(action: { isCopyingTrip = true }) {
+                Image(systemName: "doc.on.doc.fill")
+            }
+        }
+        .sheet(isPresented: $isCopyingTrip) {
+            //TripEdit(trips: $trips, addingNewTrip: $isCopyingTrip)
         }
     }
 }
