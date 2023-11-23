@@ -75,7 +75,7 @@ struct ItemEdit: View {
                 item.tripIDs.append(tripID)
             }
             .onDisappear{
-                print("disapear")
+                item.clear()
                 addingNewItem = false
             }
         }

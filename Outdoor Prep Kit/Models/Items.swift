@@ -18,14 +18,6 @@ class Items: ObservableObject {
     }
 
     func save(items: [Item]) {
-//        var i = 0
-//        for item in items{
-//            if item.id.uuidString.hasPrefix("def"){
-//                items.remove()
-//            }
-//            i += 0
-//        }
-        //Don't save default items
         let userCreatedItems = items.filter{$0.id.uuidString.hasPrefix("def")}
         
         let data = try? JSONEncoder().encode(userCreatedItems)

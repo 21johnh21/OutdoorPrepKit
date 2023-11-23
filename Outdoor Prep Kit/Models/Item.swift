@@ -27,6 +27,16 @@ struct Item: Identifiable, Codable {
         self.category = category
         self.tripIDs = tripIDs
     }
+    
+    mutating func clear(){
+        self.name=""
+        self.brand=""
+        self.model=""
+        self.weight=0.0
+        self.qty = 1
+        self.category = "Shelter"
+        self.tripIDs=[]
+    }
 }
 
 extension Item{
