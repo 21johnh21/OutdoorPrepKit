@@ -12,9 +12,8 @@ struct ItemEdit: View {
     @Binding var items: [Item]
     @Binding var addingNewItem: Bool
     let tripID : UUID
+    @Binding var item : Item
     
-    @State private var item = Item(name: "", brand: "", model: "", weight: 0.0, qty: 1, category: "Shelter", tripIDs: [])
-    //TODO: ^ probably give this id of the trip it's called from
     @State private var tempWeight : String = ""
     let categories = Item.categories
    
@@ -84,5 +83,5 @@ struct ItemEdit: View {
 }
 
 #Preview {
-    ItemEdit(items: .constant(Item.sampleItems), addingNewItem: .constant(true), tripID: UUID())
+    ItemEdit(items: .constant(Item.sampleItems), addingNewItem: .constant(true), tripID: UUID(), item: .constant(Item.sampleItems[0]))
 }

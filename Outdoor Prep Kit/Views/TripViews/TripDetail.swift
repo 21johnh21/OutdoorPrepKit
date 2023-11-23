@@ -18,6 +18,8 @@ struct TripDetail: View {
             self._trip = trip
             self._itemManager = ObservedObject(wrappedValue: Items(tripID: trip.id))
     }
+    
+    @State private var editingItem = Item(name: "", brand: "", model: "", weight: 0.0, qty: 1, category: "Shelter", tripIDs: [])
 
     var body: some View {
         VStack {
@@ -39,14 +41,15 @@ struct TripDetail: View {
                 }
             }
             .padding()
-            ItemsListView(items: $itemManager.items, isAddingNewItem: $isAddingNewItem)
+            ItemsListView(items: $itemManager.items, isAddingNewItem: $isAddingNewItem, editingItem: $editingItem)
             .sheet(isPresented: $isAddingNewItem) {
-                ItemEdit(items: $itemManager.items, addingNewItem: $isAddingNewItem, tripID: trip.id)
+                ItemEdit(items: $itemManager.items, addingNewItem: $isAddingNewItem, tripID: trip.id, item: $editingItem)
             }
             .onDisappear {
                 itemManager.save(items: itemManager.items)
                 //TODO: Should I also do this when the app is closed?
             }
+            
         }
         .toolbar {
             Button(action: { isCopyingTrip = true }) {

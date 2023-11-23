@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ItemCard: View {
     let item: Item
+    @Binding var isEditingItem : Bool
+    @Binding var editingItem : Item
     
     var body: some View {
         HStack {
@@ -31,9 +33,24 @@ struct ItemCard: View {
                 .foregroundColor(.green)
             //TODO: programatically change color based on packed status
         }
+        .swipeActions(edge: .leading) {
+            Button(action: {
+                print("Pack")
+            }) {
+                Image(systemName: "backpack.circle.fill")
+                // TODO: Make this so swiping all the way to the right packs the item
+            }
+            Button(action: {
+                print("Edit")
+                editingItem = item
+                isEditingItem = true
+            }) {
+                Image(systemName: "pencil.circle.fill")
+            }
+        }
     }
 }
 
-#Preview {
-    ItemCard(item: Item.sampleItems[0])
-}
+//#Preview {
+//    ItemCard(item: Item.sampleItems[0])
+//}
