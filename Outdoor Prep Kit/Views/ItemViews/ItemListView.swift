@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ItemsListView: View {
     @Binding var items: [Item]
-    @Binding var isAddingNewItem: Bool
+    @Binding var showItemEdit: Bool
     @Binding var editingItem : Item
     
     var body: some View {
         List {
             ForEach($items) { $item in
                 NavigationLink(destination: ItemDetail(item: item)) {
-                    ItemCard(item: item, isEditingItem: $isAddingNewItem, editingItem: $editingItem)
+                    ItemCard(item: item, showItemEdit: $showItemEdit, editingItem: $editingItem)
                 }
             }
             .onDelete { indexSet in
@@ -27,5 +27,5 @@ struct ItemsListView: View {
 }
 
 #Preview {
-    ItemsListView(items: .constant(Item.sampleItems), isAddingNewItem: .constant(true), editingItem: .constant(Item.sampleItems[0]))
+    ItemsListView(items: .constant(Item.sampleItems), showItemEdit: .constant(true), editingItem: .constant(Item.sampleItems[0]))
 }

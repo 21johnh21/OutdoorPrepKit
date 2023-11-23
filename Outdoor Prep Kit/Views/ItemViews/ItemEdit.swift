@@ -10,6 +10,7 @@ import Combine
 
 struct ItemEdit: View {
     @Binding var items: [Item]
+    @Binding var showItemEdit : Bool
     @Binding var addingNewItem: Bool
     let tripID : UUID
     @Binding var item : Item
@@ -55,18 +56,22 @@ struct ItemEdit: View {
                 ToolbarItem(placement: .cancellationAction){
                     Button("Dismiss"){
                         addingNewItem = false
+                        showItemEdit = false
                     }
                 }
                 ToolbarItem(placement: .confirmationAction){
                     if addingNewItem {
-                        Button(addingNewItem ? "Add" : "Save"){
+                        Button("Add"){
                             items.append(item)
                             addingNewItem = false
+                            showItemEdit = false
                         }
                     }else{
-                        Button(addingNewItem ? "Add" : "Save"){
+                        Button("Save"){
+                            //TODO:
                             items.append(item)
                             addingNewItem = false
+                            showItemEdit = false
                         }
                     }
                 }
@@ -83,5 +88,5 @@ struct ItemEdit: View {
 }
 
 #Preview {
-    ItemEdit(items: .constant(Item.sampleItems), addingNewItem: .constant(true), tripID: UUID(), item: .constant(Item.sampleItems[0]))
+    ItemEdit(items: .constant(Item.sampleItems), showItemEdit: .constant(true), addingNewItem: .constant(true), tripID: UUID(), item: .constant(Item.sampleItems[0]))
 }

@@ -11,6 +11,7 @@ struct TripDetail: View {
     @Binding var trip : Trip
     
     @Environment(\.scenePhase) private var scenePhase
+    @State private var showItemEdit = false
     @State private var isAddingNewItem = false
     @State private var isCopyingTrip = false
     @ObservedObject private var itemManager: Items
@@ -36,14 +37,15 @@ struct TripDetail: View {
                 Text("Items").font(.headline)
                 Spacer()
                 Button(action: {
+                    showItemEdit = true
                     isAddingNewItem = true}) {
                     Image(systemName: "plus")
                 }
             }
             .padding()
-            ItemsListView(items: $itemManager.items, isAddingNewItem: $isAddingNewItem, editingItem: $editingItem)
-            .sheet(isPresented: $isAddingNewItem) {
-                ItemEdit(items: $itemManager.items, addingNewItem: $isAddingNewItem, tripID: trip.id, item: $editingItem)
+            ItemsListView(items: $itemManager.items, showItemEdit: $showItemEdit, editingItem: $editingItem)
+            .sheet(isPresented: $showItemEdit) {
+                ItemEdit(items: $itemManager.items, showItemEdit: $showItemEdit, addingNewItem: $isAddingNewItem, tripID: trip.id, item: $editingItem)
             }
             .onDisappear {
                 itemManager.save(items: itemManager.items)

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ItemCard: View {
     let item: Item
-    @Binding var isEditingItem : Bool
+    @Binding var showItemEdit : Bool
     @Binding var editingItem : Item
     
     var body: some View {
@@ -43,7 +43,7 @@ struct ItemCard: View {
             Button(action: {
                 print("Edit")
                 editingItem = item
-                isEditingItem = true
+                showItemEdit = true
             }) {
                 Image(systemName: "pencil.circle.fill")
             }
