@@ -9,9 +9,10 @@ import SwiftUI
 
 struct TripEdit: View {
     @Binding var trips: [Trip]
-    @Binding var addingNewTrip: Bool
+    @Binding var showTripEdit: Bool
+    @Binding var trip : Trip
+    @Binding var isAddingTrip : Bool
     
-    @State private var trip = Trip(name: "", description:"")
     
     var body: some View {
         NavigationStack {
@@ -26,13 +27,23 @@ struct TripEdit: View {
             .toolbar{
                 ToolbarItem(placement: .cancellationAction){
                     Button("Dismiss"){
-                        addingNewTrip = false
+                        showTripEdit = false
                     }
                 }
                 ToolbarItem(placement: .confirmationAction){
-                    Button("Add"){
-                        trips.append(trip)
-                        addingNewTrip = false
+                    if isAddingTrip {
+                        Button("Add"){
+                            trips.append(trip)
+                            isAddingTrip = false
+                            showTripEdit = false
+                        }
+                    } else {
+                        Button("Save"){
+                            if let index = trips.firstIndex(where: { $0.id == trip.id }) {
+                                trips[index] = trip
+                            }
+                            showTripEdit = false
+                        }
                     }
                 }
             }
@@ -41,5 +52,5 @@ struct TripEdit: View {
 }
 
 #Preview {
-    TripEdit(trips: .constant(Trip.sampleTrips), addingNewTrip: .constant(true))
+    TripEdit(trips: .constant(Trip.sampleTrips), showTripEdit: .constant(true), trip: .constant(Trip.sampleTrips[0]), isAddingTrip: .constant(false))
 }

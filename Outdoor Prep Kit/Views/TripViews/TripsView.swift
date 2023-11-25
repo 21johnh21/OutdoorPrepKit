@@ -10,7 +10,9 @@ import SwiftUI
 struct TripsView: View {
     
     @ObservedObject private var tripsManager = Trips()
-    @State private var addingNewTrip = false
+    @State private var showTripEdit = false
+    @State private var editingTrip = Trip(name: "", description: "")
+    @State private var isAddingTrip = false
     @Environment(\.scenePhase) private var scenePhase
     
     //TODO: Add a way to identify the most recently edited trip and display them in order. 
@@ -21,22 +23,17 @@ struct TripsView: View {
             List {
                 ForEach($tripsManager.trips) { $trip in
                     NavigationLink(destination: TripDetail(trip: $trip)) {
-                        TripCard(trip: $trip)
+                        TripCard(trip: $trip, showTripEdit: $showTripEdit, editingTrip: $editingTrip)
                     }
                 }
                 .onDelete { indexSet in
                     tripsManager.trips.remove(atOffsets: indexSet)
                 }
-                .swipeActions(edge: .leading) {
-                    Button(action: {
-                        //TODO: Add Action 
-                    }) {
-                        Image(systemName: "pencil.circle.fill")
-                    }
-                }
             }
             .toolbar {
-                Button(action: { addingNewTrip = true }) {
+                Button(action: { 
+                    showTripEdit = true
+                    isAddingTrip = true}) {
                     Image(systemName: "plus")
                 }
             }
@@ -46,8 +43,8 @@ struct TripsView: View {
                 tripsManager.save(trips: tripsManager.trips)
             }
         }
-        .sheet(isPresented: $addingNewTrip) {
-            TripEdit(trips: $tripsManager.trips, addingNewTrip: $addingNewTrip)
+        .sheet(isPresented: $showTripEdit) {
+            TripEdit(trips: $tripsManager.trips, showTripEdit: $showTripEdit, trip: $editingTrip, isAddingTrip: $isAddingTrip)
         }
     }
 }
